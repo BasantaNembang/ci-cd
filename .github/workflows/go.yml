@@ -66,6 +66,7 @@ jobs:
     # Build & push Docker image
     - name: Build & Push Docker Image
       run: |
+        cd go-web-app
         IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/go-web-app
         TAG=${GITHUB_SHA::7}
         
