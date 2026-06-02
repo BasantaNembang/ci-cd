@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'helm/**'
-      - 'k8s/**'
+      - 'go-web-app/helm/**'
+      - 'go-web-app/k8s/**'
       - 'go-web-app/README.md'
       - 'README.md'
 
