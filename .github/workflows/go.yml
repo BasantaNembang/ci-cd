@@ -90,7 +90,8 @@ jobs:
     - name: Update tag in Helm chart
       run: |
         cd go-web-app
-        sed -i 's/tag: .*/tag: "${{GITHUB_SHA::7}}"/' helm/myapp-chart/values.yaml
+        TAG=${GITHUB_SHA::7}
+        sed -i "s/tag:.*/tag: \"$TAG\"/" helm/myapp-chart/values.yaml
 
     - name: Commit and push changes
       run: |
