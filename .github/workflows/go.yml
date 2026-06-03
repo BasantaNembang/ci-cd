@@ -95,6 +95,7 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        cd go-web-app      
         git config --global user.email "basanta@gmail.com"
         git config --global user.name "Basanta Nembang"
         git add helm/myapp-chart/values.yaml
